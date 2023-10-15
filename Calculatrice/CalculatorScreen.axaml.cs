@@ -9,6 +9,8 @@ public partial class CalculatriceScreen : Window
 {
     public CalculatriceScreen()
     {
+        Height = 450;
+        Width = 300;
         InitializeComponent();
     }
 

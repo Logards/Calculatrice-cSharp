@@ -3,6 +3,7 @@
   <component name="AvaloniaProject">
     <option name="projectPerEditor">
       <map>
+        <entry key="Calculatrice/App.axaml" value="Calculatrice/Calculatrice.csproj" />
         <entry key="Calculatrice/CalculatorScreen.axaml" value="Calculatrice/Calculatrice.csproj" />
         <entry key="Calculatrice/MainWindow.axaml" value="Calculatrice/Calculatrice.csproj" />
       </map>

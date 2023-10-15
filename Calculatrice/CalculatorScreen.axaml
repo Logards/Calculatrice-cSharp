@@ -2,54 +2,124 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+        mc:Ignorable="d" d:DesignWidth="5" d:DesignHeight="5"
         x:Class="Calculatrice.CalculatriceScreen"
         Title="Calculatrice">
-        <StackPanel HorizontalAlignment="Center" Orientation="Vertical" >
+    <Window.Styles>
+        <Style Selector="Button.Test">
+            <Setter Property="Background" Value="Aqua">
+                
+            </Setter>
+        </Style>
+    </Window.Styles>
+    <StackPanel HorizontalAlignment="Center" Orientation="Vertical">
+        <StackPanel>
+            <Border BorderBrush="White" 
+                    BorderThickness="2" 
+                    Padding="25">
                 <StackPanel>
                     <Label Name="Operation"></Label>
                     <Label Name="Result"></Label>
-                    <Grid>
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                            <ColumnDefinition Width="Auto" />
-                        </Grid.ColumnDefinitions>
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                            <RowDefinition Height="Auto" />
-                        </Grid.RowDefinitions>
-                        <Button HorizontalContentAlignment="Center"  Click="Clear" Name="ClearAll" FontSize="20" Width="60" Grid.Column="0" Grid.Row="0">C</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="ClearE" Name="ClearEntry" FontSize="20" Width="60" Grid.Column="1" Grid.Row="0">CE</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Delete" Name="Del" FontSize="20" Width="60" Grid.Column="2" Grid.Row="0">DEL</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Mod" FontSize="20" Width="60" Grid.Column="0" Grid.Row="1">%</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Divide" FontSize="20" Width="60" Grid.Column="1" Grid.Row="1">/</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Multiply" FontSize="20" Width="60" Grid.Column="2" Grid.Row="1">x</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Sign" FontSize="20" Width="60" Grid.Column="0" Grid.Row="2">+/-</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Plus" FontSize="20" Width="60" Grid.Column="1" Grid.Row="2">+</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Less" FontSize="20" Width="60" Grid.Column="2" Grid.Row="2">-</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="One" FontSize="20" Width="60" Grid.Column="0" Grid.Row="3">1</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Two" FontSize="20" Width="60" Grid.Column="1" Grid.Row="3">2</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Three" FontSize="20" Width="60" Grid.Column="2" Grid.Row="3">3</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Four" FontSize="20" Width="60" Grid.Column="0" Grid.Row="4">4</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Five" FontSize="20" Width="60" Grid.Column="1" Grid.Row="4">5</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Siw" FontSize="20" Width="60" Grid.Column="2" Grid.Row="4">6</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Seven" FontSize="20" Width="60" Grid.Column="0" Grid.Row="5">7</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Eight" FontSize="20" Width="60" Grid.Column="1" Grid.Row="5">8</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Nine" FontSize="20" Width="60" Grid.Column="2" Grid.Row="5">9</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Point" FontSize="20" Width="60" Grid.Column="0" Grid.Row="6">,</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Zero" FontSize="20" Width="60" Grid.Column="1" Grid.Row="6">0</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Equal" FontSize="20" Width="60" Grid.Column="2" Grid.Row="6">=</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Square" FontSize="20" Width="60" Grid.Column="0" Grid.Row="7">^²</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Sqrt" FontSize="20" Width="60" Grid.Column="1" Grid.Row="7">√</Button>
-                        <Button HorizontalContentAlignment="Center"  Click="Add" Name="Inverse" FontSize="20" Width="60" Grid.Column="2" Grid.Row="7">1/x</Button>
-                    </Grid>
-                </StackPanel> 
+                </StackPanel>
+            </Border>
+            <Grid RowDefinitions="Auto,Auto,Auto,Auto,Auto,Auto,Auto,Auto" ColumnDefinitions="Auto,Auto,Auto">
+                <Button HorizontalContentAlignment="Center" Click="Clear" Name="ClearAll" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="0">
+                    C
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="ClearE" Name="ClearEntry" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="0">
+                    CE
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Delete" Name="Del" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="0">
+                    DEL
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Mod" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="1">
+                    %
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Divide" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="1">
+                    /
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Multiply" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="1">
+                    x
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Sign" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="2">
+                    +/-
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Plus" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="2">
+                    +
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Less" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="2">
+                    -
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="One" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="3">
+                    1
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Two" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="3">
+                    2
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Three" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="3">
+                    3
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Four" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="4">
+                    4
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Five" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="4">
+                    5
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Siw" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="4">
+                    6
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Seven" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="5">
+                    7
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Eight" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="5">
+                    8
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Nine" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="5">
+                    9
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Point" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="6">
+                    ,
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Zero" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="6">
+                    0
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Equal" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="6">
+                    =
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Square" FontSize="20" Width="80"
+                        Grid.Column="0" Grid.Row="7">
+                    ^²
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Sqrt" FontSize="20" Width="80"
+                        Grid.Column="1" Grid.Row="7">
+                    √
+                </Button>
+                <Button HorizontalContentAlignment="Center" Click="Add" Name="Inverse" FontSize="20" Width="80"
+                        Grid.Column="2" Grid.Row="7">
+                    1/x
+                </Button>
+            </Grid>
         </StackPanel>
+    </StackPanel>
 </Window>
