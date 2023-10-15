@@ -1,3 +1,4 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using CalculatorQuest;
@@ -13,7 +14,7 @@ public partial class CalculatriceScreen : Window
         Width = 300;
         InitializeComponent();
     }
-
+    
     void Delete(object? sender, RoutedEventArgs args)
     {
         if (Operation.Content.ToString().Length > 0)
